@@ -1,0 +1,12 @@
+<h1>Games#new</h1>
+<h3>********* Welcome to the longest word-game! *********</h3>
+<p>Here is your grid:</p>
+<p><%= @letter  %></p>
+
+<p>What is the longest word you can find?</p>
+<form action="/score" method="post">
+  <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+  <input type="text" name="word" placeholder=" ">
+  <input type="submit" value="Play">
+</form>
+
